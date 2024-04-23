@@ -1,0 +1,247 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+
+/* Reset default styles */
+html {
+  line-height: 1.15;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+/* Body styles */
+body {
+  background: linear-gradient(
+    190deg,
+    rgb(134, 123, 205) 0%,
+    rgb(106, 90, 171) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #222;
+  overflow: hidden;
+}
+
+/* Container styles */
+.App {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Buttons container styles */
+.buttons {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left side */
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Button styles */
+.buttons button {
+  background-color: #271c6c;
+  color: #e1ebfd;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1rem;
+  margin-right: 0.5rem; /* Adjusted margin */
+}
+
+.buttons button:hover {
+  background-color: #433aa8;
+}
+
+/* Heading styles */
+.App h1 {
+  display: inline;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #e1ebfd;
+  text-shadow: 0 0 5px #433aa8, 3px -1px 5px #271c6c;
+}
+
+/* Input container styles */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Search input and button styles */
+#searchInput {
+  min-width: 15rem;
+  width: 40vw;
+  max-height: 2.5rem;
+  background-color: #e1ebfd;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+#searchInput:focus {
+  outline: none;
+  border: 2px solid rgb(67, 58, 168);
+}
+
+#searchBtn, #voiceSearchBtn {
+  background-color: #271c6c;
+  color: #e1ebfd;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1rem;
+}
+
+#searchBtn:hover, #voiceSearchBtn:hover {
+  background-color: #433aa8;
+}
+
+/* Add todos section styles */
+.addTodos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Task input, date, and select styles */
+.input-container input[type="text"],
+.input-container input[type="datetime-local"],
+.input-container select {
+  min-width: 12rem;
+  width: 30%;
+  max-height: 3rem;
+  background-color: #e1ebfd;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Increase size of date input */
+.input-container input[type="datetime-local"] {
+  max-height: 3.5rem;
+}
+
+/* Add button styles */
+.add-btn {
+  background-color: #271c6c;
+  color: #e1ebfd;
+  border-radius: 50%;
+  border: 2px solid #e1ebfd;
+  font-size: 1.7rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px #271c6c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #433aa8;
+}
+
+/* Task container styles */
+.task-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Card styles */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+    circle,
+    hsla(237, 34%, 78%, 0.9) 0%,
+    hsla(219, 88%, 94%, 0.9) 100%
+  );
+  margin: 0.5rem;
+  width: 22rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.card.completed {
+  background: rgba(135, 123, 205, 0.8);
+}
+
+.card .content {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+.card .btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.card .btns button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 640px) {
+  .App {
+    margin-top: 2rem;
+  }
+
+  #searchInput {
+    width: 80%;
+  }
+
+  .addTodos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-btn {
+    margin-top: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+
+  .buttons button {
+    margin: 0.5rem 0;
+  }
+
+  .task-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-right: 0;
+  }
+}
